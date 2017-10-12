@@ -1,0 +1,9 @@
+alias gl="git log"
+alias ga="git add"
+alias gc="git commit"
+alias gch="git checkout"
+alias gf="git fetch"
+alias gp="git push"
+alias gr="git rebase"
+alias gb="git branch"
+
