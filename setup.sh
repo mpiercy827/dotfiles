@@ -9,7 +9,6 @@ cd $DEV_ENV_DIR
 FILES=''
 FILES+=' .aliases'
 FILES+=' .bash_profile'
-FILES+=' .inputrc'
 FILES+=' .vimrc'
 FILES+=' .zshrc'
 

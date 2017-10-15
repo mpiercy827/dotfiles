@@ -79,4 +79,9 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.aliases
 
+# Spaceship theme configuration
+export SPACESHIP_PACKAGE_SHOW=false
+export SPACESHIP_DOCKER_SHOW=false
+export SPACESHIP_KUBECONTEXT_SHOW=false
