@@ -7,3 +7,4 @@ alias gp="git push"
 alias gr="git rebase"
 alias gb="git branch"
 
+alias ws="cd ~/Workspace"

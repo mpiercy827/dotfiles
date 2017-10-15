@@ -46,6 +46,12 @@ echo "...done"
 echo
 
 echo
+echo "Setting up workspace..."
+mkdir -p ~/Workspace
+echo "...done"
+echo
+
+echo
 echo "Copying home directory dotfiles..."
 # Create directory to house current dotfiles
 # as a backup so you can restore your previous
@@ -75,5 +81,15 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
   cd $DEV_ENV_DIR
   vim +PluginInstall +qall
 fi
+echo "...done"
+echo
+
+echo
+echo "Setting up tmux..."
+echo "...done"
+echo
+
+echo
+echo "Setting up iTerm..."
 echo "...done"
 echo
