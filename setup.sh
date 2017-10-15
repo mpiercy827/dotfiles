@@ -1,9 +1,9 @@
 #!/bin/bash
-DOTFILES_DIR=~/.dotfiles
-OLD_DIR=$DOTFILES_DIR/old
+DEV_ENV_DIR=~/.dev-environment
+OLD_DIR=$DEV_ENV_DIR/old
 
 # Ensure we're in the dotfiles directory
-cd $DOTFILES_DIR
+cd $DEV_ENV_DIR
 
 # List of dotfiles for home directory
 FILES=''
@@ -20,11 +20,6 @@ BREW+=' tree'
 BREW+=' vim'
 BREW+=' wget'
 BREW+=' zsh'
-
-# Checks if a file exists but isn't a symlink
-function check_file () {
-  [ -f $1 ] && [ ! -h $1 ]
-}
 
 echo
 echo "Setting up dependencies..."
@@ -55,11 +50,11 @@ if [ ! -e $OLD_DIR ]; then
 fi
 
 for f in $FILES; do
-  if check_file ~/$f; then
+  if [ -e ~/$f ]; then
     echo "Copying old ~/$f into $OLD_DIR..."
     cp ~/$f $OLD_DIR/$f
   fi
-  ln -sf $DOTFILES_DIR/$f ~/$f
+  cp $DEV_ENV_DIR/$f ~/$f
 done
 echo "...done"
 echo
@@ -71,7 +66,7 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   git submodule update --init --recursive
   ./install.sh
-  cd $DOTFILES_DIR
+  cd $DEV_ENV_DIR
   vim +PluginInstall +qall
 fi
 echo "...done"

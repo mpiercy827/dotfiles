@@ -35,6 +35,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 
 " Syntax Plugins
+Plugin 'scrooloose/syntastic'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
@@ -60,13 +61,32 @@ filetype plugin indent on    " required
 
 let mapleader = ','
 
+syntax on
+set number
+set ruler
+highlight ColorColumn ctermbg=2
+set colorcolumn=81
+
+set encoding=utf8
+set background=dark
 colorscheme gruvbox
+
+" Tab settings
+set expandtab
+set smarttab
+set shiftwidth=2
+set softtabstop=2
 
 " Mappings for easy navigation between panes
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" No backup/swap
+set nobackup
+set nowritebackup
+set noswapfile
 
 " Make it easier to run commands
 noremap ; :
@@ -78,8 +98,32 @@ nnoremap <S-Tab> :bprevious<CR>
 " Trim extra white space at end of the line
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
+" Mouse Control
+set mouse=a
+
+" Hidden Files
+set nohidden
+
+" Search
+set incsearch
+set showcmd
+set ignorecase
+set smartcase
+set hlsearch
+
+" Show mode
+set showmode
+set showcmd
+set ruler
+set ttyfast
+set backspace=indent,eol,start
+set laststatus=2
+
 " Vim Test Setup
 let test#strategy = "vimux"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>f :TestFile<CR>
 nmap <silent> <leader>r :TestSuite<CR>
+
+" NERDTree show hidden files:
+let NERDTreeShowHidden=1
