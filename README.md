@@ -1,4 +1,4 @@
-# Dev Environment
+# Dotfiles
 
 This is a repo for setting up my dev environment.
 
@@ -6,6 +6,5 @@ This is a repo for setting up my dev environment.
 
 - [x] Vim
 - [x] zsh
-- [ ] iTerm
-- [ ] tmux
-- [ ] Setup Script
+- [x] tmux
+- [x] Setup Script

@@ -1,9 +1,9 @@
 #!/bin/bash
-DEV_ENV_DIR=~/.dev-environment
-OLD_DIR=$DEV_ENV_DIR/old
+DOTFILES_DIR=~/.dotfiles
+OLD_DIR=$DOTFILES_DIR/old
 
 # Ensure we're in the dotfiles directory
-cd $DEV_ENV_DIR
+cd $DOTFILES_DIR
 
 # List of dotfiles for home directory
 FILES=''
@@ -66,7 +66,7 @@ for f in $FILES; do
     echo "Copying old ~/$f into $OLD_DIR..."
     cp ~/$f $OLD_DIR/$f
   fi
-  cp $DEV_ENV_DIR/$f ~/$f
+  cp $DOTFILES_DIR/$f ~/$f
 done
 echo "...done"
 echo
@@ -78,18 +78,8 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   git submodule update --init --recursive
   ./install.sh
-  cd $DEV_ENV_DIR
+  cd $DOTFILES_DIR
   vim +PluginInstall +qall
 fi
-echo "...done"
-echo
-
-echo
-echo "Setting up tmux..."
-echo "...done"
-echo
-
-echo
-echo "Setting up iTerm..."
 echo "...done"
 echo
