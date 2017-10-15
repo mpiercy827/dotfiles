@@ -4,7 +4,7 @@ This is a repo for setting up my dev environment.
 
 ## Checklist
 
-- [ ] Vim
+- [x] Vim
 - [ ] zsh
 - [ ] iTerm
 - [ ] tmux

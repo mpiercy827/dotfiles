@@ -22,7 +22,7 @@ BREW+=' wget'
 BREW+=' zsh'
 
 echo
-echo "Setting up dependencies..."
+echo "Setting up Homebrew and dependencies..."
 if [[ $OSTYPE == darwin* ]]; then
   if ! type brew > /dev/null 2>&1; then
     echo "Installing brew..."
@@ -30,12 +30,19 @@ if [[ $OSTYPE == darwin* ]]; then
   fi
   echo "Installing$BREW..."
   brew install $BREW 2> /dev/null
-  if [ ! -d ~/.oh-my-zsh ]; then
-    echo "Installing Oh My Zsh..."
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-    chsh -s /bin/zsh
-  fi
 fi
+echo "...done"
+echo
+
+echo
+echo "Setting up zsh..."
+if [ ! -d ~/.oh-my-zsh ]; then
+  echo "Installing Oh My Zsh..."
+  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  chsh -s /bin/zsh
+fi
+mkdir -p ~/.oh-my-zsh/custom/themes
+curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
 echo "...done"
 echo
 
@@ -69,12 +76,5 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
   cd $DEV_ENV_DIR
   vim +PluginInstall +qall
 fi
-echo "...done"
-echo
-
-echo
-echo "Setting up zsh..."
-mkdir -p ~/.oh-my-zsh/custom/themes
-curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
 echo "...done"
 echo
