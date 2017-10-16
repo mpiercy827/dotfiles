@@ -9,6 +9,8 @@ cd $DOTFILES_DIR
 FILES=''
 FILES+=' .aliases'
 FILES+=' .bash_profile'
+FILES+=' .gitignore'
+FILES+=' .tmux.conf'
 FILES+=' .vimrc'
 FILES+=' .zshrc'
 
