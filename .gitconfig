@@ -1,0 +1,9 @@
+[user]
+    name = Matt Piercy
+    email = mpiercy@gmail.com
+[credential]
+    helper = osxkeychain
+[push]
+    default = simple
+[alias]
+    fixup = commit --amend -C HEAD

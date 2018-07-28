@@ -5,7 +5,6 @@ if ! [ -x "$(command -v elixir)" ]; then
   brew install elixir
 else
   echo "Elixir already installed"
-  echo "$(elixir --version)"
 fi
 echo "...done"
 echo

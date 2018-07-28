@@ -7,6 +7,7 @@ OLD_DOTFILES=$DOTFILES_DIR/old
 FILES=''
 FILES+=' .aliases'
 FILES+=' .bash_profile'
+FILES+=' .gitconfig'
 FILES+=' .gitignore'
 FILES+=' .tmux.conf'
 FILES+=' .vimrc'

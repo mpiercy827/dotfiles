@@ -10,3 +10,4 @@ alias gb="git branch"
 
 # Directory aliases
 alias ws="cd ~/Workspace"
+alias gws="cd $(go env GOPATH)"

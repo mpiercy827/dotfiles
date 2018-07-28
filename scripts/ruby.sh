@@ -5,7 +5,6 @@ if ! [ -x "$(command -v ruby)" ]; then
   brew install ruby
 else
   echo "Ruby already installed"
-  echo "$(ruby --version)"
 fi
 echo "...done"
 echo
