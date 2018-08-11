@@ -11,13 +11,26 @@ echo "...done"
 echo
 
 echo
+echo "Installing dep..."
+if ! [ -x "$(command -v dep)" ]; then
+  brew update
+  brew install dep
+  brew upgrade dep
+else
+  echo "dep already installed"
+  echo "$(dep version)"
+fi
+echo "...done"
+echo
+
+echo
 echo "Installing goenv..."
 if ! [ -x "$(command -v goenv)" ]; then
   brew update
   brew install goenv
 else
-  echo "Go already installed"
-  echo "$(go --version)"
+  echo "Goenv already installed"
+  echo "$(goenv --version)"
 fi
 echo "...done"
 echo
