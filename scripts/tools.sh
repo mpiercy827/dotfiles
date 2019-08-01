@@ -7,8 +7,12 @@ BREW=''
 BREW+=' ncdu'
 BREW+=' tmux'
 BREW+=' tree'
+BREW+=' rg'
+BREW+=' jq'
+BREW+=' diff-so-fancy'
 BREW+=' vim'
 BREW+=' wget'
+BREW+=' watch'
 BREW+=' zsh'
 
 echo
