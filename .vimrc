@@ -127,3 +127,9 @@ nmap <silent> <leader>r :TestSuite<CR>
 
 " NERDTree show hidden files:
 let NERDTreeShowHidden=1
+
+" CtrlPBuffer Search
+nnoremap ,b :CtrlPBuffer<CR>
+
+" Start NERDTree on VIMEnter
+autocmd VimEnter * NERDTree
