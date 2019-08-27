@@ -88,7 +88,7 @@ export SPACESHIP_KUBECONTEXT_SHOW=false
 
 # Go config
 export GOPATH=$HOME/go
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:/usr/local/bin:$(go env GOPATH)/bin
 
 function add_alias() {
   echo "alias $1=\"$2\"" >> ~/.aliases
