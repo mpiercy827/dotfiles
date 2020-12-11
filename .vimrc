@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Vim Theme
 Plugin 'morhetz/gruvbox'
+Plugin 'flazz/vim-colorschemes'
 
 " Plugins
 " NERDTree
@@ -38,6 +39,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/syntastic'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'elzr/vim-json'
+Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-markdown'
 Plugin 'voithos/vim-python-syntax'
@@ -133,3 +135,8 @@ nnoremap ,b :CtrlPBuffer<CR>
 
 " Start NERDTree on VIMEnter
 autocmd VimEnter * NERDTree
+
+" Go fmt on save
+let g:go_fmt_command = "goimports"
+let g:go_version_warning = 0
+

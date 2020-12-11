@@ -8,6 +8,15 @@ alias gp="git push"
 alias gr="git rebase"
 alias gb="git branch"
 
+alias gri="git rebase -i"
+alias gbm="git branch -m"
+alias gcm="git commit -m"
+alias gbc="git branch | cat"
+alias gfp="git fetch -p"
+
+alias gcob="gco -b"
+
 # Directory aliases
 alias ws="cd ~/Workspace"
-alias gws="cd $(go env GOPATH)"
+alias szh="source ~/.zshrc"
+alias v="vim"

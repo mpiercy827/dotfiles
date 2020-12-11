@@ -7,3 +7,5 @@
     default = simple
 [alias]
     fixup = commit --amend -C HEAD
+[url "git@github.com:"]
+	insteadOf = https://github.com/
