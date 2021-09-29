@@ -70,8 +70,8 @@ highlight ColorColumn ctermbg=2
 set colorcolumn=81
 
 set encoding=utf8
-set background=dark
-colorscheme gruvbox
+" set background=dark
+" colorscheme gruvbox
 
 " Tab settings
 set expandtab
@@ -135,6 +135,10 @@ nnoremap ,b :CtrlPBuffer<CR>
 
 " Start NERDTree on VIMEnter
 autocmd VimEnter * NERDTree
+
+" vim-multiple-cursors configuration
+let g:multi_cursor_exit_from_visual_mode=1
+let g:multi_cursor_exit_from_normal_mode=1
 
 " Go fmt on save
 let g:go_fmt_command = "goimports"
