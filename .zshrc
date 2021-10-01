@@ -93,3 +93,6 @@ export PATH=$PATH:/usr/local/bin:$(go env GOPATH)/bin
 function add_alias() {
   echo "alias $1=\"$2\"" >> ~/.aliases
 }
+
+# Ruby config
+eval "$(rbenv init -)"

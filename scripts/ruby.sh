@@ -10,12 +10,12 @@ echo "...done"
 echo
 
 echo
-echo "Installing rvm..."
-if ! [ -x "$(command -v rvm)" ]; then
-  \curl -sSL https://get.rvm.io | bash -s stable --ruby
-  echo "source ~/.rvm/scripts/rvm" >> ~/.zshrc
+echo "Installing rbenv..."
+if ! [ -x "$(command -v rbenv)" ]; then
+  brew update
+  brew install rbenv
 else
-  echo "RVM already installed"
+  echo "rbenv already installed"
 fi
 echo "...done"
 echo
