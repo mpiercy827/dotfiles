@@ -4,7 +4,7 @@ DOTFILES_DIR=~/.dotfiles
 
 # List of programs to install with brew
 BREW=''
-BREW+=' ncdu'
+BREW+=' gdu'
 BREW+=' tmux'
 BREW+=' tree'
 BREW+=' rg'
