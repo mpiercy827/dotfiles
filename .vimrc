@@ -133,12 +133,12 @@ let NERDTreeShowHidden=1
 " CtrlPBuffer Search
 nnoremap ,b :CtrlPBuffer<CR>
 
-" Start NERDTree on VIMEnter
-autocmd VimEnter * NERDTree
-
 " vim-multiple-cursors configuration
 let g:multi_cursor_exit_from_visual_mode=1
-let g:multi_cursor_exit_from_normal_mode=1
+let g:multi_cursor_exit_from_insert_mode=1
+
+" Start NERDTree on VIMEnter
+autocmd VimEnter * NERDTree
 
 " Go fmt on save
 let g:go_fmt_command = "goimports"
